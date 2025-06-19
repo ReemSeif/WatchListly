@@ -1,0 +1,33 @@
+#header{
+background-color: var(--primarycolor);
+padding: 10px 0;
+}
+
+#header .container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#header .nav-links{
+    display: flex;
+    align-items: center;
+}
+#header .nav-links li{
+    margin-left: 15px;
+    margin-right: 30px;
+}
+#header .logo{
+    font-weight: 600;
+    font-size: 1.5rem;
+    text-decoration: none;
+    color: white;
+}
+.active{
+    color: black;
+    text-decoration: none;
+}
+.notactive{
+    text-decoration: none;
+    color: white;
+}
