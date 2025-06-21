@@ -5,12 +5,13 @@ import Home from './components/Home'
 import Watched from './components/Watched'
 import AddMovie from './components/AddMovie'
 import Layout from './components/Layout'
+import ContextProvider from './context/moviesContext'
 function App() {
 let router= createBrowserRouter([{
 path:'' , element:<Layout/>,
 children:[
   {
-    path:'home' ,element:<Home/>
+    path:'' ,element:<Home/>
   },
   {
      path:'Watchlater' ,element:<Watched/>
@@ -24,7 +25,16 @@ children:[
   
 ])
   return (
-    <RouterProvider router={router}></RouterProvider>
+<ContextProvider>
+   <RouterProvider router={router}></RouterProvider>
+</ContextProvider>
+ 
+
+  
+
+       
+    
+   
   )
 }
 

@@ -1,0 +1,38 @@
+.watchlist{
+    padding: 20px 0;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+.watchlist .headings{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    align-items: center;
+}
+h1, .count{
+    color: var(--primarycolor);
+     margin-top: 10px;
+}
+.count{
+    display: block;
+    background-color: var(--secondarycolor);
+    font-size: 1.125rem;
+    padding: 5px 15px;
+    border-radius: 500px;
+   
+}
+.movies-grid{
+    display: grid;
+   grid-template-columns: repeat( 3, 1fr);
+    gap: 10px;
+   
+}
+
+@media (min-width : 992px){
+    .movies-grid{
+        grid-template-columns: repeat( 5, 1fr);
+    }
+    
+}
+
+
