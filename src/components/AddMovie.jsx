@@ -1,18 +1,18 @@
 import React, { useEffect, useState } from 'react'
 import './AddMovie.css'
-import axios from 'axios';
+import { getmovie } from '../api';
 import MovieCard from './MovieCard';
 
 function AddMovie() {
   const [search , setSearch]=useState('');
   const [movies , setMovies]=useState([]);
   useEffect(()=>{
-axios.get(`http://www.omdbapi.com/?s=${search}&apikey=77177e0`).then((response)=>{
- if(response.data.Search){
-  setMovies(response.data.Search);
-  console.log(response.data.Search)
- }
-}).catch((error)=> console.log(error));
+if(search.trim == "") return;
+const getData= async () => {
+  const result = await getmovie(search)
+  setMovies(result);
+}
+getData();
   },[search])
   return (
     <div className='add-page'>
